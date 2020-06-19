@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000;
+      color: lightgray;
+    }
+
+    nav {
+      border-bottom: solid 2px #b00;
+    }
+
+    .background-black {
+      background-color: #000;
+    }
+
+    .background-dark-gray {
+      background-color: #121212;
+    }
+
+    .nav-accent {
+      background-color: #b00;
+      height: 56px;
+      width: 50%;
+      position: fixed;
+      z-index: 1031;
+      left: 50%;
+    }
+
+    .nav-accent::before {
+      position: absolute;
+      top: 0;
+      left: -56px;
+      content: "";
+      display: block;
+      background-color: transparent;
+      border-bottom: 56px solid #b00;
+      border-left: 56px solid transparent;
+    }
+
+    .nav-spacer {
+      height: 56px;
+    }
+
+    .marker-spacer {
+      position: relative;
+      top: -56px;
+    }
+
+    .fictional-image {
+      background-color: brown;
+      width: 100%;
+      height: 680px;
+    }
+
+    .fictional-image p {
+      position: relative;
+      top: 46%;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .list-group-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      transition: background-color 1s;
+    }
+
+    .list-group-item:hover {
+      background-color: #121212;
+    }
+
+    .fictional-menu-image {
+      background-color: brown;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
+  <title>Fictional Restaurant</title>
+</head>
+
+<body>
+  <div id="content">
+    <div class="nav-accent"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#welcome">FICTIONAL RESTAURANT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu-marker">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-marker">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#venues-marker">Our Venues</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="home" class="nav-spacer"></div>
+    <div class="container-fluid">
+      <div class="row background-dark-gray pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div id="welcome" class="col-sm-12">
+              <h2>Welcome to Fictional Restaurant</h2>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Etiam mattis blandit nisl, sit amet vulputate ante rhoncus vitae
+                Nullam venenatis scelerisque mauris, eget scelerisque diam
+                Aliquam erat volutpat
+                Aenean luctus rhoncus leo ut accumsan
+                Vivamus ornare velit lacinia magna faucibus venenatis
+                Sed a sem quis purus viverra congue quis non mi
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse
+                potenti.
+              </p>
+              <p>Cras id sollicitudin velit, eget placerat arcu
+                Nulla facilisi
+                Curabitur ac massa sodales, venenatis ligula sit amet, suscipit enim
+                Aliquam sodales augue et sem pulvinar venenatis
+                Duis sollicitudin, quam ut pharetra iaculis, mauris lorem elementum purus, sed luctus enim turpis
+                vehicula
+                justo
+                Donec aliquam mi vitae suscipit ornare
+                Phasellus vitae urna condimentum, blandit orci eu, vulputate sem
+                Curabitur justo nulla, varius sit amet ipsum sit amet, finibus ornare purus
+                Phasellus feugiat orci nisi, eu dapibus nibh iaculis at
+                Vestibulum condimentum tincidunt suscipit
+                Morbi aliquet aliquet erat eu vestibulum
+                Sed imperdiet pulvinar tortor, porttitor aliquet risus sagittis eu
+                Aliquam urna metus, accumsan a ante nec, sagittis pretium nulla
+                Fusce neque libero, consectetur sit amet pulvinar et, iaculis eget velit
+                Vestibulum eget velit at sapien facilisis auctor elementum non orci
+                Nam tortor massa, interdum eget congue et, luctus eget leo.
+              </p>
+              <p>
+                Duis interdum tempus volutpat
+                Sed ultricies a tortor sed rutrum
+                Curabitur laoreet lorem ut ultricies finibus
+                Cras ac orci imperdiet, lacinia mauris at, consequat sapien
+                Proin viverra augue eu dui efficitur, a pretium felis lacinia
+                Aliquam egestas, leo vel rutrum luctus, lorem leo pulvinar leo, ac accumsan nisi massa vel eros
+                Duis vel erat feugiat, bibendum erat eu, condimentum lacus
+                Etiam ut venenatis tellus, sit amet hendrerit sem
+                Nam nec orci quis odio dictum tincidunt ac quis ex
+                Phasellus at purus at diam auctor commodo mattis ac tellus
+                Phasellus urna ante, semper ut lectus in, luctus lacinia eros.
+              </p>
+              <p></p>
+              <p></p>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="fictional-image">
+                <p>Pretend this is an image</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row background-black pt-5 pb-5">
+        <div id="menu-marker" class="marker-spacer"></div>
+        <div id="menu" class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Take a look at our menu</h2>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Cras justo odio</p>
+                  <p class="my-0 ml-auto">$12</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3"> Donec aliquam mi vitae suscipit ornare</p>
+                  <p class="my-0 ml-auto">$15</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Phasellus vitae urna condimentum</p>
+                  <p class="my-0 ml-auto">$25</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Curabitur justo nulla</p>
+                  <p class="my-0 ml-auto">$25</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Morbi aliquet aliquet erat eu vestibulum</p>
+                  <p class="my-0 ml-auto">$28</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Sed imperdiet pulvinar tortor</p>
+                  <p class="my-0 ml-auto">$30</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Duis interdum tempus volutpat</p>
+                  <p class="my-0 ml-auto">$11</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Proin viverra augue eu dui efficitur</p>
+                  <p class="my-0 ml-auto">$5</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Aenean auctor libero ex</p>
+                  <p class="my-0 ml-auto">$3</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Maecenas sed lacinia orci</p>
+                  <p class="my-0 ml-auto">$16</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Duis ultricies feugiat erat ut convallis</p>
+                  <p class="my-0 ml-auto">$8</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Vivamus sollicitudin ipsum eget felis scelerisque</p>
+                  <p class="my-0 ml-auto">$20</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row background-dark-gray pt-5 pb-5">
+        <div id="about-marker" class="marker-spacer"></div>
+        <div class="container">
+          <div class="row">
+            <div id="about" class="col-sm-12">
+              <h2>About us</h2>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="fictional-image">
+                <p>Pretend this is an image</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <p>Maecenas porta risus massa, at ullamcorper metus suscipit ac
+                Cras molestie, enim id ultrices facilisis, augue nulla egestas orci, in pretium libero magna tincidunt
+                sem
+                Phasellus a imperdiet metus
+                Praesent non suscipit lectus
+                Vivamus quis nisl ac nisl interdum dapibus a ut enim
+                Aenean ultrices, nulla id interdum dictum, tellus libero placerat tortor, id congue ante ante quis purus
+                Phasellus maximus cursus dui non pharetra
+                Praesent iaculis tincidunt rhoncus
+                Integer eu urna nisi
+                In sapien est, lacinia ut ultrices sed, blandit non ligula
+                Ut lorem lorem, fringilla tincidunt magna vitae, ornare venenatis mi.
+              </p>
+              <p>Maecenas quis felis sed mi tincidunt varius
+                Morbi lectus sem, sagittis id facilisis a, ultricies eget leo
+                Donec sed est a sapien scelerisque malesuada a sed mi
+                Morbi ut interdum lorem
+                Praesent enim sapien, elementum non ipsum venenatis, feugiat finibus lectus
+                Suspendisse fringilla dolor at facilisis commodo
+                Duis vitae consectetur odio
+                Maecenas ut sapien mauris
+                Phasellus vitae pharetra ex
+                Phasellus sagittis mauris mattis purus vulputate elementum
+                Vivamus id augue dapibus, vehicula ipsum feugiat, rutrum diam
+                Fusce ipsum magna, iaculis quis venenatis et, placerat sed ante
+                In hac habitasse platea dictumst.
+              </p>
+              <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+                Sed dignissim non urna ac porttitor
+                Nullam in nisi at sapien rutrum convallis
+                Nullam massa ex, ornare ac mattis sed, laoreet a dolor
+                Aenean vitae venenatis felis
+                Fusce placerat mollis dolor non tempus
+                Nulla vehicula felis nec convallis mollis
+                Pellentesque nisi ipsum, dignissim non massa quis, pharetra ultrices est
+                Duis nec pulvinar nunc, eu facilisis neque
+                Phasellus fringilla vitae orci ut vestibulum
+                Sed condimentum egestas porttitor
+                Quisque commodo lacus id nunc iaculis tempor
+                Vivamus elementum tristique facilisis
+                Suspendisse est libero, lobortis sit amet ullamcorper vulputate, dapibus ut dolor
+                Aliquam posuere quam vel dolor pulvinar, condimentum rhoncus augue suscipit.
+              </p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row background-black pt-5 pb-5">
+        <div id="venues-marker" class="marker-spacer"></div>
+        <div id="venues" class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Visit us at one of our venues</h2>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Nulla eleifend mi nibh</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Aliquam erat volutpat</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Maecenas non venenatis risus</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Fusce nec dolor consequat ligula auctor facilisis</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Maecenas vel ligula eget lorem feugiat scelerisque</p>
+                </li>
+                <li class="list-group-item">
+                  <div class="fictional-menu-image"></div>
+                  <p class="my-0 ml-3">Pellentesque mollis metus at ex ultrices rutrum</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
