@@ -1,2 +1,40 @@
 import './style.scss';
-import { createTag } from  './createTag';
+import { addOnClickEvent } from './addEvent'
+
+window.onload = function() {
+let contentPage = document.getElementById('content');
+let accent = document.createElement('div');
+accent.classList.add('nav-accent');
+contentPage.append(accent);
+let naviBar = document.createElement('nav');
+naviBar.classList.add('align-items-center');
+let pageLogo = document.createElement('a');
+pageLogo.classList.add('page-logo');
+pageLogo.href = '#home';
+pageLogo.append('FICTIONAL RESTAURANT');
+naviBar.append(pageLogo);
+let naviLinks = document.createElement('div');
+naviLinks.classList.add('navigation-links-container');
+let homeLink = document.createElement('a');
+let menuLink = document.createElement('a');
+let aboutLink = document.createElement('a');
+let venuesLink = document.createElement('a');
+homeLink.id = 'home-tag';
+menuLink.id = 'menu-tag';
+aboutLink.id = 'about-tag';
+venuesLink.id = 'venues-tag';
+homeLink.classList.add('navigation-link');
+menuLink.classList.add('navigation-link');
+aboutLink.classList.add('navigation-link');
+venuesLink.classList.add('navigation-link');
+homeLink.innerHTML = 'Home';
+menuLink.innerHTML = 'Menu';
+aboutLink.innerHTML = 'About Us';
+venuesLink.innerHTML = 'Our Venues';
+naviLinks.append(homeLink);
+naviLinks.append(menuLink);
+naviLinks.append(aboutLink);
+naviLinks.append(venuesLink);
+naviBar.append(naviLinks);
+contentPage.append(naviBar);
+};
