@@ -9,6 +9,8 @@ This project was created to practice HTML and CSS generation using javascript.
 - webpack 
 
 ## How to deploy
+Upload index.html and main.js to your server. Access the page by going to the index.html address.
+
 
 ## Author
 
@@ -20,7 +22,19 @@ This project was created to practice HTML and CSS generation using javascript.
 
 ## Live Demo
 
-You can check a demo version of the project in [this link]().
+You can check a demo version of the project in [this link](https://raw.githack.com/MiguelDP4/js-restaurant-page/feature/dist/index.html).
+
+### Images
+
+#### Home page wide screen
+![screenshot](./screenshots/home-wide.png)
+#### Menu page wide screen
+![screenshot](./screenshots/menu-wide.png)
+#### About page narrow screen
+![screenshot](./screenshots/about-narrow.png)
+#### Venues page narrow screen
+![screenshot](./screenshots/venues-narrow.png)
+
 
 ## 🤝 Contributing
 
