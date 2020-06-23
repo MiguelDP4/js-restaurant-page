@@ -118,11 +118,11 @@ nav a:hover {
   align-items: center;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  transition: background-color .2s;
+  transition: background-color .6s;
 }
 
 .list-group-item:hover {
-  background-color: $background-light;
+  background-color: $background-dark;
 }
 
 .fictional-menu-image {

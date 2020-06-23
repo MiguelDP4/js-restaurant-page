@@ -2,9 +2,9 @@ import { globals } from './globals'
 import { writeParagraph } from './writeParagraph';
 export const drawHome = () => {
   if(globals.tagState != 'home'){  
-    let pageContainer = document.getElementById('content');
     let containerFluid = document.getElementById('container-fluid');
     let homeRow = document.createElement('div');
+    homeRow.id = "home-row";
     homeRow.classList.add('row', 'background-dark-gray', 'pt-5', 'pb-5');
     let homeContainer = document.createElement('div');
     homeContainer.classList.add('container');
@@ -40,5 +40,14 @@ export const drawHome = () => {
     menuTag.style.backgroundColor = 'transparent';
     aboutTag.style.backgroundColor = 'transparent';
     venuesTag.style.backgroundColor = 'transparent';
+    let menuRow = document.getElementById('menu-row');
+    let aboutRow = document.getElementById('about-row');
+    let venuesRow = document.getElementById('venues-row');
+    if(menuRow != null)
+      menuRow.parentNode.removeChild(menuRow);
+    if(aboutRow != null)
+      aboutRow.parentNode.removeChild(aboutRow);
+    if(venuesRow != null)
+      venuesRow.parentNode.removeChild(venuesRow);
   }
 };
