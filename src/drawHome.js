@@ -1,5 +1,6 @@
 import { globals } from './globals'
 import { writeParagraph } from './writeParagraph';
+import { removeElementAnimation } from './removeElementAnimation'
 export const drawHome = () => {
   if(globals.tagState != 'home'){  
     let containerFluid = document.getElementById('container-fluid');
@@ -29,9 +30,7 @@ export const drawHome = () => {
     rightColumnDiv.append(pretendImage);
     innerRow.append(rightColumnDiv);
     homeContainer.append(innerRow);
-    homeRow.append(homeContainer);
     containerFluid.append(homeRow);
-    globals.tagState = 'home';
     let homeTag = document.getElementById('home-tag');
     let menuTag = document.getElementById('menu-tag');
     let aboutTag = document.getElementById('about-tag');
@@ -43,11 +42,17 @@ export const drawHome = () => {
     let menuRow = document.getElementById('menu-row');
     let aboutRow = document.getElementById('about-row');
     let venuesRow = document.getElementById('venues-row');
-    if(menuRow != null)
-      menuRow.parentNode.removeChild(menuRow);
-    if(aboutRow != null)
-      aboutRow.parentNode.removeChild(aboutRow);
-    if(venuesRow != null)
-      venuesRow.parentNode.removeChild(venuesRow);
+    if(menuRow != null){
+      removeElementAnimation(menuRow, homeRow, homeContainer);
+    }
+    if(aboutRow != null){
+      removeElementAnimation(aboutRow, homeRow, homeContainer);
+    }
+    if(venuesRow != null){
+      removeElementAnimation(venuesRow, homeRow, homeContainer);
+    }
+    if(globals.tagState == '')
+      homeRow.append(homeContainer);
+    globals.tagState = 'home';
   }
 };

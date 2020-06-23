@@ -1,5 +1,6 @@
 import { globals } from './globals'
 import { writeParagraph } from './writeParagraph';
+import { removeElementAnimation } from './removeElementAnimation'
 export const drawMenu = () => {
   if(globals.tagState != 'menu'){
     let containerFluid = document.getElementById('container-fluid');
@@ -179,7 +180,6 @@ export const drawMenu = () => {
     innerRow.append(leftColumnDiv);
     innerRow.append(rightColumnDiv);
     menuContainer.append(innerRow);
-    menuRow.append(menuContainer);
     containerFluid.append(menuRow);
     globals.tagState = 'menu';
     let homeTag = document.getElementById('home-tag');
@@ -193,11 +193,14 @@ export const drawMenu = () => {
     let homeRow = document.getElementById('home-row');
     let aboutRow = document.getElementById('about-row');
     let venuesRow = document.getElementById('venues-row');
-    if(homeRow != null)
-      homeRow.parentNode.removeChild(homeRow);
-    if(aboutRow != null)
-      aboutRow.parentNode.removeChild(aboutRow);
-    if(venuesRow != null)
-      venuesRow.parentNode.removeChild(venuesRow);
+    if(homeRow != null){
+      removeElementAnimation(homeRow, menuRow, menuContainer);
+    }
+    if(aboutRow != null){
+      removeElementAnimation(aboutRow, menuRow, menuContainer);
+    }
+    if(venuesRow != null){
+      removeElementAnimation(venuesRow, menuRow, menuContainer);
+    }
   }
 };

@@ -1,7 +1,39 @@
 import { globals } from './globals'
 import { writeParagraph } from './writeParagraph';
+import { removeElementAnimation } from './removeElementAnimation'
 export const drawAbout = () => {
   if(globals.tagState != 'about'){
+    let containerFluid = document.getElementById('container-fluid');
+    let aboutRow = document.createElement('div');
+    aboutRow.id = "about-row";
+    aboutRow.classList.add('row', 'background-dark-gray', 'pt-5', 'pb-5');
+    let aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('container');
+    let innerRow = document.createElement('div');
+    innerRow.classList.add('row');
+    let titleDiv = document.createElement('div');
+    titleDiv.classList.add('col-sm-12');
+    let titleTag = document.createElement('h2');
+    titleTag.appendChild(document.createTextNode('About Us'));
+    titleDiv.append(titleTag);
+    innerRow.append(titleDiv);
+    let leftColumnDiv = document.createElement('div');
+    leftColumnDiv.classList.add('col-sm-12', 'col-lg-6');
+    let pretendImage = document.createElement('div');
+    pretendImage.classList.add('fictional-image');
+    pretendImage.append(writeParagraph("Pretend this is an image"));
+    leftColumnDiv.append(pretendImage);
+    innerRow.append(leftColumnDiv);
+    let rightColumnDiv = document.createElement('div');
+    rightColumnDiv.classList.add('col-sm-12','col-lg-6');
+    rightColumnDiv.append(writeParagraph('Phasellus bibendum sapien eu varius sodales. Donec molestie fringilla est, sed ornare turpis bibendum vel. Aliquam aliquet vehicula nulla, non cursus lorem tempus non. Etiam interdum vitae justo id scelerisque. Aliquam erat volutpat. Ut quis eros vitae mauris euismod sagittis ac rhoncus lacus. Cras lacinia vitae lectus vitae lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam metus neque, eleifend quis congue eu, placerat pellentesque mi. Sed lacus enim, eleifend nec ullamcorper nec, dictum pretium mi. Nulla interdum, dui a viverra eleifend, risus orci mollis lectus, sed rhoncus eros diam a velit. Ut pretium vestibulum tortor vitae malesuada. Aliquam molestie lacus vel enim fermentum mattis. Etiam sodales cursus est. Sed eleifend at enim ut auctor. Quisque non lectus urna.'))
+    rightColumnDiv.append(writeParagraph('Etiam nibh lorem, rhoncus vitae nulla ut, aliquam feugiat velit. Praesent pharetra in lorem et congue. Aliquam pellentesque ex nec leo luctus, non tincidunt tellus auctor. In non enim hendrerit, tempus ex vitae, ullamcorper ex. Quisque tincidunt nunc in erat efficitur dignissim. Quisque bibendum sagittis est sed convallis. Vestibulum non lacus egestas, posuere turpis finibus, bibendum sapien. Morbi vel nulla ut lorem eleifend pellentesque. Praesent a justo pharetra, euismod odio id, ullamcorper lorem. Vivamus non volutpat quam. Duis eu tortor est. Sed eleifend posuere elit. Morbi vel nulla ut lorem eleifend pellentesque. Praesent a justo pharetra, euismod odio id, ullamcorper lorem.'));
+    innerRow.append(rightColumnDiv);
+    aboutContainer.append(innerRow);
+    containerFluid.append(aboutRow);
+
+
+
     globals.tagState = 'about';
     let homeTag = document.getElementById('home-tag');
     let menuTag = document.getElementById('menu-tag');
@@ -14,11 +46,14 @@ export const drawAbout = () => {
     let homeRow = document.getElementById('home-row');
     let menuRow = document.getElementById('menu-row');
     let venuesRow = document.getElementById('venues-row');
-    if(homeRow != null)
-      homeRow.parentNode.removeChild(homeRow);
-    if(menuRow != null)
-      menuRow.parentNode.removeChild(menuRow);
-    if(venuesRow != null)
-      venuesRow.parentNode.removeChild(venuesRow);
+    if(homeRow != null){
+      removeElementAnimation(homeRow, aboutRow, aboutContainer);
+    }
+    if(venuesRow != null){
+      removeElementAnimation(venuesRow, aboutRow, aboutContainer);
+    }
+    if(menuRow != null){
+      removeElementAnimation(menuRow, aboutRow, aboutContainer);
+    }
   }
 };
