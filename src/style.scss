@@ -118,7 +118,7 @@ nav a:hover {
   align-items: center;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  transition: background-color .6s;
+  transition: background-color 0.6s;
 }
 
 .list-group-item:hover {
@@ -135,30 +135,30 @@ nav a:hover {
   .nav-accent {
     width: 40%;
   }
-} 
+}
 
 @media only screen and (max-width: 1110px) {
   .nav-accent {
     width: 30%;
   }
-} 
+}
 
 @media only screen and (max-width: 930px) {
   nav {
     flex-direction: column;
-    height: 112px
+    height: 112px;
   }
 
   .page-logo {
-    margin:0;
+    margin: 0;
     padding: 11px 0;
   }
 
-  .nav-accent{
+  .nav-accent {
     display: none;
   }
 
   .nav-spacer {
     height: 112px;
   }
-} 
+}
