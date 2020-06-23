@@ -1,10 +1,10 @@
 import './style.scss';
-import { globals } from './globals'
-import { drawNavBar } from './drawNavBar';
-import { drawContainer } from './drawContainer';
-import { drawHome } from './drawHome';
+import drawNavBar from './drawNavBar';
+import drawContainer from './drawContainer';
+import drawHome from './drawHome';
 
-window.onload = function() {
+// eslint-disable-next-line func-names
+window.onload = function () {
   drawNavBar();
   drawContainer();
   drawHome();

@@ -1,5 +1,7 @@
-export const globals = (() => {
-  let tagState = '';
+const globals = (() => {
+  const tagState = '';
 
   return { tagState };
 })();
+
+export { globals as default };

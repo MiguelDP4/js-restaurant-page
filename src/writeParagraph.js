@@ -1,6 +1,8 @@
-export const writeParagraph = (text) => {
-  let paragraph = document.createElement('p');
-  let textNode = document.createTextNode(text);
+const writeParagraph = (text) => {
+  const paragraph = document.createElement('p');
+  const textNode = document.createTextNode(text);
   paragraph.appendChild(textNode);
   return paragraph;
 };
+
+export { writeParagraph as default };
